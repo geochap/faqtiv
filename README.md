@@ -8,7 +8,13 @@ The mechanism for this is that when you add a question, similar verified questio
 It initially consists of:
 
 - A node + angular based tool that lets users ask questions and curate the generated answer scripts
-- A framework for configuring apis against the data in your database
+- A java based framework for configuring parameterized queries and entity indexers against the data in your database
+
+Note that the system operates by generating javascript programs against APIs, not by generating SQL. There are various reasons for this:
+
+- Answering queries typically involves other non-sql services. E.g. entity resolution is better done via elastic/opensearch/etc. than in sql. 
+- Databases can be tuned to answer specific query patterns instead of getting hit with arbitrarily generated sql.
+- API as abstraction layer is far more general purpose and lends itself better to composability.
 
 
 # Getting Started
@@ -16,7 +22,7 @@ It initially consists of:
 
 # Installation
 
-# Usage - App
+# Usage - Application
 
 The FAQtiv application has these pages:
 
@@ -51,7 +57,12 @@ The edit question page lets the user update the question, review and modify the 
 ![image](https://user-images.githubusercontent.com/740118/227786706-08d96f5e-f0d8-4a73-87d1-969c89033533.png)
 
 # Usage - SQL Agent
+The FAQtiv SQL Agent is a java/dropwizard application that serves two purposes:
 
+- It lets you configure and peridiocally run entity index operations (entities are indexed in opensearch by default).
+- It lets you configure and host a set of parameterized queries with well defined inputs and outputs against a SQL database. 
+
+YAML is used to configure the overall project, the individual entity index queries, and the parameterized queries. 
 
 # Roadmap
 
