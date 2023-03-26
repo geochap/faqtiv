@@ -116,5 +116,17 @@ YAML is used to configure the overall project, the individual entity index queri
 
 # Roadmap
 
+There's so much to explore and refine, but here's a quick list:
+
+- Provide table and graph views for returned data
+- Better recognition of classes of questions
+- Auto verification bots
+- Move towards ChatGPT's new plugin view of the world
+- Multi-level composability so questions can be built upon other questions, not just the base data apis
+- Switch to gpt4 when possible
+- Add user authentication
+- Add ability to publish an "example-base" -- verified questions and answer programs
+- ...
+
 
 
