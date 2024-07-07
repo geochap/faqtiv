@@ -14,4 +14,4 @@ The project is made up of several parts:
 
 - [FAQtiv Desktop](https://github.com/geochap/faqtiv-desktop) -- An open source Electron based playground for developing and interacting with FAQtiv agents
 
-Agents are exposed as one or more function calls to the LLM. The Agent Framework will generate a JSON file that describes the functions in OpenAI format. We use OpenAI Assistant API within Desktop, but expect that the agents should operate with any funcation calling supporting LLMs.
+Agents are exposed as one or more function calls to the LLM. The Agent Framework will generate a JSON file that describes the functions in OpenAI format for integration with any compatible chatbot/LLM. We use OpenAI Assistant API within Desktop.
